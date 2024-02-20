@@ -1,0 +1,446 @@
+/* 기본설정 */
+a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.hidden{
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    position: absolute;
+}
+ul#skipmenu_list li a:focus{
+    width: 100%;
+    height: 30px;
+    background: black;
+    color: white;
+    text-align: center;
+    font: normal 16px/30px 'pretendard';
+    z-index: 999;
+}
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+body{
+    font-family: Pretendard;
+}
+/* 스크롤바 조작 */
+/* body{
+    -ms-overflow-style: none;  
+}        
+
+body::-webkit-scrollbar {  
+    display: none; 
+} */
+
+/* html, body {
+    width:100vw; 
+    height:100vh; 
+    overflow-x: hidden;
+} */
+/* body {
+    overflow: overlay; 
+} */
+
+body::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+body::-webkit-scrollbar-thumb {
+    width: 16px;
+    height: 16px;
+    outline: none;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    box-shadow: inset 7px 7px 0 rgba(34, 34, 34, 0.15);
+    display: block;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    border: 4px solid transparent;
+    box-shadow: inset 7px 7px 0 rgba(34, 34, 34, 0.5);
+}
+body::-webkit-scrollbar-track, ::-webkit-scrollbar-button {
+	background: transparent;
+    display: none;
+    
+}
+
+
+
+
+/* 상단메뉴 */
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(41, 41, 41, 0.3);
+    box-sizing: border-box;
+    border-bottom: solid 1px #666666;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    min-width: 1200px;
+}
+header a{
+    color: #eeeeee;
+}
+button#menu_icon{
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin: 25px 0px 0px 60px ;
+}
+button#menu_icon i{
+    font-size: 20px;
+    color: #eeeeee;
+}
+h1#logo{
+    float: left;
+    margin: 30px 6.77% 0px 30px;
+}
+nav#mainmenu{
+    width: 35.57%;
+    height: 100%;
+    float: left;
+    border-left: solid 1px #666666;
+    padding-left: 20px;
+}
+ul#mainmenu_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+}
+ul#mainmenu_list li{
+    margin-right: 1%;
+}
+ul#mainmenu_list li a{
+    font: normal 16px 'pretendard';
+}
+ul#mainmenu_list li:hover a{
+    color: #aaa;
+}
+nav#usermenu{
+    /* width: 10%; */
+    width: 8.07%;
+    height: 100%;
+    position: absolute;
+    right: 10%;
+    top: 0px;
+    border-left: solid 1px #666666;
+    border-right: solid 1px #666666;
+}
+ul#usermenu_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+ul#usermenu_list li{
+    width: 20%;
+    text-align: center;
+}
+ul#usermenu_list li a img{
+    width: 18px;
+    height: 18px;
+}
+
+div#lang{
+    width: 9%;
+    height: 100%;
+    position: absolute;
+    right: 1%;
+    top : 0px;
+}
+ul#lang_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+ul#lang_list li{
+    width: 20%;
+    height: 100%;
+    color: #666666;
+    font: normal 16px/70px 'pretendard';
+    text-align: center;
+}
+ul#lang_list li a{
+    font: normal 16px 'pretendard';
+}
+ul#lang_list li:first-child{
+    color: #eeeeee;
+}
+/* 모든메뉴 */
+nav#allmenu{
+    width: 100%;
+    height: 333px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    background-color: #111111;
+    padding-top: 30px;
+    /* display: none; */
+    opacity: 1;
+}
+nav#allmenu button#close_allmenu_btn{
+    width: 25px;
+    height: 25px;
+    margin-left: 60px;
+    float: left;
+}
+nav#allmenu button#close_allmenu_btn i{
+    color: #eeeeee;
+    font-size: 24px;
+}
+ul#allmenu_list{
+    float: left;
+    width: 50%;
+    height: 200px;
+    margin-left: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+ul#allmenu_list>li>a{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    font: normal 16px 'pretendard' ;
+}
+
+ul#allmenu_list>li>a::after{
+    content: "";
+    width: 70px;
+    height: 1px;
+    scale: 0;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -10px;
+    transition: 0.3s ease-out;
+}
+ul#allmenu_list>li.selected>a{
+    color: #fff; 
+    font-style: bold;   
+}
+ul#allmenu_list>li.selected>a::after{
+    scale: 1;
+}
+
+
+ul.allsubmenu_list{
+    margin-top: 30px;
+}
+ul.allsubmenu_list li{
+    margin-top: 20px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+ul.allsubmenu_list li::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    scale: 0;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: -10px;
+    transition: 0.2s ease-out;
+}
+ul.allsubmenu_list li a{
+    color: #aaa;
+}
+ul.allsubmenu_list li:hover a{
+    color: #FFF;
+}
+/* 서치부분 */
+.stop_scrolling{
+    height: 100%;
+    overflow: hidden;
+}
+div#search_wrap{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 70%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+div#search_wrap form{
+    width: 700px;
+    border-bottom: solid 1px #eeeeee;
+    height: 40px;
+    margin: 0px auto;
+    padding-top: 400px;
+    
+}
+div#search_wrap form input{
+    width: 100%;
+    font: normal 24px 'pretendard';
+    text-indent: 10px;
+    color: #eeeeee;
+    background: none;
+    border: none;
+}
+
+div#search_wrap p{
+    width: 90px;
+    float: left;
+    color: #eeeeee;
+    font: normal 20px 'pretendard';
+    margin-top: 10px;
+}
+div#hashtag{
+    width: 700px;
+    margin: 0px auto;
+}
+div#search_wrap button.close_allmenu_btn{
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    width: 50px;
+    height: 50px;
+}
+div#search_wrap button.close_allmenu_btn i{
+    color: #eeeeee;
+    font-size: 32px;
+}
+
+/* 하단영역 */
+div#footer_wrap{
+    width: 100%;
+    height: 200px;
+    background-color: #111111;
+    min-width: 1200px;
+    overflow: hidden;
+}
+footer{
+    width: 1400px;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px 120px;
+}
+div#footer{
+    width: 40%;
+    /* height: 200px; */
+    height: 100%;
+    float: left;
+    border-right: solid 1px #333;
+    padding-top: 35px;
+}
+p#footer_logo{
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+p#footer_logo img{
+    width: 100%;
+}
+p#footer_address{
+    color: #AAA;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    margin-bottom: 30px;
+}
+div#footer span{
+    color: #AAA;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+}
+nav#footer_info{
+    width: 580px;
+    height: 100%;
+    float: left;
+    border-right: solid 1px #333;
+    padding-top: 35px;
+}
+ul#footer_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ul#footer_list>li>p{
+    color: #CCC;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 18px */
+    margin-bottom: 12px;
+}
+ul.footer_sub_list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul.footer_sub_list li{
+    color: #AAA;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 18px */
+    margin-bottom: 6px;
+}
+div#footer_num{
+    width: 240px;
+    height: 100%;
+    float: right;
+    padding-top: 35px;
+}
+ul#footer_num_list{
+    width: 100%;
+    height: auto;
+}
+ul#footer_num_list li{
+    width: 100%;
+    height: auto;
+    color: #EEE;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+ul#footer_num_list li:nth-child(2){
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 500;
+}

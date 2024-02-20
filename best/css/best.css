@@ -1,0 +1,233 @@
+/* 비주얼영역 */
+div#best_visual_wrap{
+    width: 100%;
+    height: 420px;
+}
+section#best_visual{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 200px;
+    background: url(/furniture/best/images/best_visual.jpg) no-repeat center center;
+    background-size: cover;
+}
+section#best_visual h2{
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+}
+nav#category{
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    padding-top:50px;
+}
+div#category_inner{
+    width: 1000px;
+    height: 160px;
+    margin: 0px auto;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+ul#category_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+ul#category_list li{
+    height: 90%;
+}
+p.category_img{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: rgb(178, 178, 178);
+    margin-bottom: 16px;
+}
+p.category_title{
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+}
+nav#category button{
+    width: 25px;
+    height: 25px;
+}
+nav#category button i{
+    font-size: 26px;
+    text-align: center;
+    color: gray;
+}
+button#category_left_btn{
+    position: absolute;
+    left: -5%;
+    top: 40%;
+}
+button#category_right_btn{
+    position: absolute;
+    right: -5%;
+    top: 40%;
+}
+/* 아이템영역 */
+/* 필터 */
+div#content_wrap{
+    width: 100%;
+    height: auto;
+    min-height: 800px;
+}
+section#content{
+    /* width: 100%; */
+    width: 1920px;
+    min-height: 800px;
+    height: auto;
+}
+div#filter_wrap{
+    width: 20%;
+    height: 100%;
+}
+nav#filter{
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+    float: left;
+    clear: both;
+}
+nav#filter input{
+    width: 94%;
+    height:40px;
+    border: none;
+    text-indent: 8px;
+    margin-bottom: 8px;
+    border-bottom: gray solid 2px;
+}
+ul#filter_list{
+    width: 100%;
+    height: auto;
+}
+ul#filter_list li{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+p.filter_title{
+    font-size: 20px;
+    font-style: bold;
+    line-height: 40px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+p.filter_title i{
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: gray;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+ul.filter_sub_list{
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+}
+ul.filter_sub_list li{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 40px;
+}
+/* 아이템목록 */
+div#item_wrap{
+    width: 70%;
+    height: auto;
+    margin-left: 20%;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    padding-left: 2%;
+}
+ul#item_list{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap:1em;
+}
+ul#item_list li{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+p.item_img{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 16px;
+    background-color: thistle;
+}
+p.item_brand{
+    font-size: 14px;
+    font-style: normal;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+p.item_name{
+    font-size: 18px;
+    font-style: bold;
+    margin-left: 8px;
+}
+/* 페이지 */
+div#num_list_inner{
+    width: 200px;
+    height: 50px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+ul#num_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+ul#num_list li{
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+div#num_list_inner button{
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+button#num_left{
+    left: -50px;
+}
+button#num_right{
+    right:-50px;
+}
+
+
+

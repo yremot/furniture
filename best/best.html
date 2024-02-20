@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/furniture/css/reset.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js'> </script>
+    <link rel="stylesheet" href="/furniture/css/common.css">
+    <link rel="stylesheet" href="/furniture/best/css/best.css">
+
+    <script src="/furniture/js/mainmenu.js"></script>
+
+
+    <title>Furniture_Best</title>
+</head>
+
+<body>
+    <!-- 스킵메뉴 시작 -->
+    <ul id="skipmenu_list">
+        <li><a href="#" class="hidden">메뉴바로가기</a></li>
+        <li><a href="#" class="hidden">본문바로가기</a></li>
+        <li><a href="#" class="hidden">하단바로가기</a></li>
+    </ul>
+    <!-- 스킵메뉴끝 -->
+    <!-- 상단메뉴시작 -->
+    <header>
+        <button id="menu_icon"><i class="fa-solid fa-bars"></i></button>
+        <h1 id="logo"><a href="/furniture/index.html"><img src="/furniture/images/LOGO.png" alt="FURNITURE"></a></h1>
+        <nav id="mainmenu">
+            <h2 class="hidden">메인메뉴</h2>
+            <ul id="mainmenu_list">
+                <li><a href='/furniture//best/best.html'>베스트</a></li>
+                <li><a href='#'>세일상품</a></li>
+                <li><a href='#'>브랜드</a></li>
+                <li><a href='#'>매거진</a></li>
+                <li><a href='#'>프로모션</a></li>
+                <li><a href='#'>온라인쇼룸</a></li>
+            </ul>
+        </nav>
+        <nav id="usermenu">
+            <h2 class="hidden">사용자메뉴</h2>
+            <ul id="usermenu_list">
+                <li><a href='#'><img src="/furniture/images/user_icon1.png" alt="search"></a></li>
+                <li><a href='#'><img src="/furniture/images/user_icon2.png" alt="user"></a></li>
+                <li><a href='#'><img src="/furniture/images/user_icon3.png" alt="shop"></a></li>
+            </ul>
+        </nav>
+        <div id="lang">
+            <ul id="lang_list">
+                <li>KR</li>
+                <li>|</li>
+                <li>EN</li>
+            </ul>
+        </div>
+        <nav id="allmenu">
+            <h2 class="hidden">모든메뉴</h2>
+            <button id="close_allmenu_btn"><i class="fa-solid fa-xmark"></i></button>
+            <ul id="allmenu_list">
+                <li><a href="#">전체가구</a>
+                </li>
+                <li><a href="#">침실가구</a>
+                    <ul class="allsubmenu_list">
+                        <li><a href="#">패밀리침대</a></li>
+                        <li><a href="#">호텔침대</a></li>
+                        <li><a href="#">매트리스</a></li>
+                        <li><a href="#">모션베드</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">거실가구</a>
+                    <ul class="allsubmenu_list">
+                        <li><a href="#">테이블</a></li>
+                        <li><a href="#">거실장</a></li>
+                        <li><a href="#">소파</a></li>
+                        <li><a href="#">수납장</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">주방가구</a>
+                    <ul class="allsubmenu_list">
+                        <li><a href="#">식탁</a></li>
+                        <li><a href="#">수납장</a></li>
+                        <li><a href="#">의자</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">서재가구</a>
+                    <ul class="allsubmenu_list">
+                        <li><a href="#">책상</a></li>
+                        <li><a href="#">책장</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">의자</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">유아/키즈</a>
+                    <ul class="allsubmenu_list">
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">책상</a></li>
+                        <li><a href="#">소파</a></li>
+                        <li><a href="#">놀이장</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">옷장/수납장</a>
+                    <ul class="allsubmenu_list">
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">수납장</a></li>
+                        <li><a href="#">리빙박스</a></li>
+                        <li><a href="#">신발장</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홈인테리어</a>
+                    <ul class="allsubmenu_list">
+                        <li><a href="#">조명</a></li>
+                        <li><a href="#">식물</a></li>
+                        <li><a href="#">홈갤러리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="search_wrap">
+            <form>
+                <input type="text" size="54" maxlength="60" placeholder="2024 F/W 이달의 매거진 바로가기" autocomplete="off"
+                    autofocus="autofocus">
+            </form>
+            <div id="hashtag">
+                <p>#거실장</p>
+                <p>#서랍장</p>
+                <p>#책장</p>
+                <p>#소파</p>
+            </div>
+            <button class="close_allmenu_btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </header>
+
+    <!-- 상단메뉴끝 -->
+    <!-- 비주얼영역시작 -->
+    <div id="best_visual_wrap">
+        <section id="best_visual">
+            <h2>BEST</h2>
+        </section>
+    </div>
+    <!-- 비주얼영역끝 -->
+    <!-- 컨텐츠영역시작 -->
+    <!-- 카테고리시작 -->
+    <nav id="category">
+        <h2 class="hidden">카테고리</h2>
+        <div id="category_inner">
+            <ul id="category_list">
+                <li><a href="#">
+                    <p class="category_img"></p>
+                    <p class="category_title">ALL</p>
+                </a></li>
+                <li><a href="#">
+                    <p class="category_img"></p>
+                    <p class="category_title">소파</p>
+                </a></li>
+                <li><a href="#">
+                    <p class="category_img"></p>
+                    <p class="category_title">의자</p>
+                </a></li>
+                <li><a href="#">
+                    <p class="category_img"></p>
+                    <p class="category_title">의자</p>
+                </a></li>
+                <li><a href="#">
+                    <p class="category_img"></p>
+                    <p class="category_title">의자</p>
+                </a></li>
+                <li><a href="#">
+                    <p class="category_img"></p>
+                    <p class="category_title">의자</p>
+                </a></li>
+                <li><a href="#">
+                    <p class="category_img"></p>
+                    <p class="category_title">의자</p>
+                </a></li>
+            </ul>
+            <button id="category_left_btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="category_right_btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </nav>
+    <!-- 카테고리끝 -->
+    <!-- 아이템영역시작 -->
+    <div id="content_wrap">
+        <section id="content">
+            <h2 class="hidden">베스트제품</h2>
+            <div id="filter_wrap">
+                <nav id="filter">
+                    <h3 class="hidden">검색필터</h3>
+                    <input type="text" size="54" maxlength="40" placeholder="검색어 입력" autocomplete="off">
+                    <ul id="filter_list">
+                        <li>
+                            <p class="filter_title">종류<i class="fa-solid fa-plus"></i></p>
+                            <ul class="filter_sub_list">
+                                <li>종류1</li>
+                                <li>종류2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="filter_title">컬러<i class="fa-solid fa-plus"></i></p>
+                            <ul class="filter_sub_list">
+                                <li>종류1</li>
+                                <li>종류2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="item_wrap">
+                <ul id="item_list">
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+                    <li><a href='#'>
+                        <p class='item_img'></p>
+                        <p class='item_brand'>브랜드</p>
+                        <p class='item_name'>소파</p>
+                    </a></li>
+
+                </ul>
+                <div id="num_list_inner">
+                    <ul id="num_list">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                    <button id="num_left"><</button>
+                    <button id="num_right">></button>
+                
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+    <!-- 아이템영역끝 -->
+    <!-- 컨텐츠영역끝 -->
+    <!-- 하단영역시작 -->
+    <div id="footer_wrap">
+        <footer>
+            <h2 class="hidden">하단정보영역</h2>
+            <div id="footer">
+                <p id="footer_logo"><img src="/furniture/images/LOGO.png" alt="furniture"></p>
+                <p id="footer_address">서울특별시 중구 세종대로 110 | 대표이사 : 김찬찬<br>
+                    사업자등록번호 111-80-33113 | 통신판매업신고 2023-서울강남-00011 사업자확인
+                </p>
+                <span>Copyrightⓒ FURNITURE Corporation. All Rights Reserved.</span>
+            </div>
+            <nav id="footer_info">
+                <h3 class="hidden">하단정보</h3>
+                <ul id="footer_list">
+                    <li>
+                        <p>회사소개</p>
+                        <ul class="footer_sub_list">
+                            <li>개인정보처리방침</li>
+                            <li>관리방침</li>
+                            <li>이용약관</li>
+                            <li>위치정보이용약관</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>고객지원</p>
+                        <ul class="footer_sub_list">
+                            <li>자주묻는질문</li>
+                            <li>1:1문의</li>
+                            <li>교환반품안내</li>
+                            <li>대량구매</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>이용가이드</p>
+                        <ul class="footer_sub_list">
+                            <li>브랜드스토리</li>
+                            <li>이벤트</li>
+                            <li>협찬문의</li>
+                            <li>매장찾기</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="footer_num">
+                <ul id="footer_num_list"> 
+                    <li>고객센터</li>
+                    <li>1555-2222</li>
+                    <li>상담가능시간 10:00 ~ 16:00</li>
+                </ul>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- 하단영역끝 -->
+
+
+</body>
+
+</html>
